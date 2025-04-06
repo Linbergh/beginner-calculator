@@ -1,27 +1,33 @@
-def add(number_1, number_2):
-    return number_1 + number_2
+def add(x, y):
+    return x + y
 
-def subtract(number_1, number_2):
-    return number_1 - number_2
 
-def multiply(number_1, number_2):
-    return number_1 * number_2
+def subtract(x, y):
+    return x - y
 
-def divide(number_1, number_2):
-    if number_1 or number_2 == 0:
+
+def multiply(x, y):
+    return x * y
+
+
+def divide(x, y):
+    if x == 0 or y == 0:
         return "Cannot divide by zero"
     else:
-        return number_1 / number_2
-    
+        return x / y
+
+
 x = int(input("What's x: "))
 y = int(input("What's y: "))
-operation = input("What operation do you want to perform? (Add, Subtract, Multiply or Divide)")
+operation = input(
+    "What operation do you want to perform? (Add, Subtract, Multiply or Divide) "
+)
 
-if operation == "Add":
-    add(x, y)
-elif operation == "Subtract":
-    subtract(x, y)
-elif operation == "Multiply":
-    multiply(x, y)
-else:
-    divide(x, y)
+if operation == "add":
+    print(add(x, y))
+elif operation == "subtract":
+    print(subtract(x, y))
+elif operation == "multiply":
+    print(multiply(x, y))
+elif operation == "divide":
+    print(divide(x, y))
