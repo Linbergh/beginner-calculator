@@ -23,11 +23,21 @@ operation = input(
     "What operation do you want to perform? (Add, Subtract, Multiply or Divide) "
 )
 
-if operation == "add":
-    print(add(x, y))
-elif operation == "subtract":
-    print(subtract(x, y))
-elif operation == "multiply":
-    print(multiply(x, y))
-elif operation == "divide":
-    print(divide(x, y))
+# if operation == "add":
+#     print(add(x, y))
+# elif operation == "subtract":
+#     print(subtract(x, y))
+# elif operation == "multiply":
+#     print(multiply(x, y))
+# elif operation == "divide":
+#     print(divide(x, y))
+
+match operation:
+    case "add":
+        print(add(x, y))
+    case "subtract":
+        print(subtract(x, y))
+    case "multiply":
+        print(multiply(x, y))
+    case "divide":
+        print(divide(x, y))
